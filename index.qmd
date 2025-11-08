@@ -58,7 +58,7 @@ treatment <- read_csv("../treatment.csv")
 :::{.panel-tabset}
 
 ## Online Version
-Full report content in HTML format...
+
 
 ## PDF Version
 [Download PDF Report](index.pdf){ .btn .btn-primary .btn-lg }
