@@ -61,7 +61,7 @@ treatment <- read_csv("../treatment.csv")
 Full report content in HTML format...
 
 ## PDF Version
-[Download PDF Report](/index.pdf){ .btn .btn-primary .btn-lg }
+[Download PDF Report](/docs/index.pdf){ .btn .btn-primary .btn-lg }
 
 <iframe src="/index.pdf" width="100%" height="600px" style="border: none; margin-top: 1rem;">
 </iframe>
