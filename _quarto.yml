@@ -7,9 +7,9 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - href: reports/
-        text: AMS Reports
+        text: AMS Report
+      # - href: reports/
+      #   text: AMS Reports
       - href: about.qmd
         text: About
   sidebar:
