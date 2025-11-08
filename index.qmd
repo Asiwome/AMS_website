@@ -330,7 +330,7 @@ ggplot(culture_st_compl, aes(x = reorder(sub_bmc, -percentage), y = percentage, 
 
 -   **Cumulative curve** reaches \~80% by around 22 out of 36 wards, contributes most of the antimicrobial consumption.
 
--   \*\*Right Side (Gray Bars)\*: Wards with lower antimicrobial use have minimal impact on overall consumption.
+-   **Right Side (Gray Bars)**: Wards with lower antimicrobial use have minimal impact on overall consumption.
 
 ```{r}
 #| label: benchmark-chart
