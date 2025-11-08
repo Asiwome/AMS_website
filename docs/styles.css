@@ -1,0 +1,72 @@
+/* AMS Brand Colors */
+:root {
+  --ams-blue: #0056b3;
+  --ams-dark: #003366;
+  --ams-accent: #ff6b35;
+}
+
+/* Custom button styling */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--ams-blue);
+  color: white;
+  border: 1px solid var(--ams-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--ams-dark);
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--ams-blue);
+  border: 1px solid var(--ams-blue);
+}
+
+.btn-outline:hover {
+  background-color: var(--ams-blue);
+  color: white;
+}
+
+/* Section spacing */
+h2 {
+  border-bottom: 2px solid var(--ams-blue);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* Callout styling */
+.callout-note {
+  border-left: 4px solid var(--ams-blue);
+  background-color: #f8f9fa;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+
+
+
+.team-footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 2px solid #0056b3;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.team-footer ul {
+  display: inline-block;
+  text-align: left;
+  margin: 1rem auto;
+}

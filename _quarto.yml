@@ -2,3 +2,21 @@ project:
   type: website
   output-dir: docs
 
+website:
+  title: "AMS Reporting Portal"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: reports/
+        text: AMS Reports
+      - href: about.qmd
+        text: About
+  sidebar:
+    style: floating
+    
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
