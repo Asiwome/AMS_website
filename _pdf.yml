@@ -1,0 +1,32 @@
+# _pdf.yml - PDF-specific configuration for AMS reports
+format:
+  pdf:
+    documentclass: article
+    papersize: a4
+    geometry:
+      - top=1in
+      - bottom=1in
+      - left=1in
+      - right=1in
+    mainfont: Times New Roman
+    fontsize: 11pt
+    linestretch: 1.25
+    toc: true
+    number-sections: true
+    secnumdepth: 3
+    include-in-header:
+      - text: |
+          \usepackage{booktabs}
+          \usepackage{longtable}
+          \usepackage{graphicx}
+          \usepackage{caption}
+          \usepackage{float}
+          \usepackage{hyperref}
+
+execute:
+  echo: false
+  warning: false
+  fig-align: center
+
+fig-cap-location: top
+tbl-cap-location: top

@@ -54,6 +54,21 @@ culture_st_compl <- read_csv("../culture_lab_complince.csv")
 treatment <- read_csv("../treatment.csv")
 ```
 
+
+:::{.panel-tabset}
+
+## Online Version
+Full report content in HTML format...
+
+## PDF Version
+[Download PDF Report](/reports/ams-report.pdf){ .btn .btn-primary .btn-lg }
+
+<iframe src="/index.pdf" width="100%" height="600px" style="border: none; margin-top: 1rem;">
+</iframe>
+
+:::
+
+
 ## Executive Summary
 
 The Point Prevalence Survey (PPS) conducted in May 2024 assessed antimicrobial prescribing patterns across Tamale Teaching Hospital. Key findings highlight critical gaps in stewardship practices:

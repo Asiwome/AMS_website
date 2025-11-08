@@ -87,3 +87,57 @@ h2 {
   color: #0056b3;
   margin-bottom: 1.5rem;
 }
+
+
+/* PDF container styling */
+.pdf-container {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+/* Download button styling */
+.btn-download {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.btn-download:hover {
+  background-color: #218838;
+  color: white;
+}
+
+/* PDF viewer styling */
+.pdf-viewer {
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Report cards */
+.report-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.report-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.report-card h3 {
+  margin-top: 0;
+  color: #0056b3;
+}
