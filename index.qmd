@@ -408,13 +408,13 @@ ggplot(wards_dat, aes(x = reorder(department_name, -prop_antimicrbial_patient)))
 
 - Dr. Ana Maria Simono Charadan [Consultant & Chair-person]
 - Dr. Samuel Yao Alomatu [Infectious Diseases Specialist]
-- Dr. Elvis Duorina, [Specialist Pharmacist]
+- Dr. Elvis Duorina, [Senior Specialist Pharmacist]
 - Mr. Alhassan M. Shamudeen, [Head of Research and Development]
 - Dr. David Eklu Zeyeh, MLS, [Medical Microbiologist]
 - Dr. Anthony Kwaw [Specialist Pharmacist]
-- Dr. Prince Parku [Specialist Pharmacist]
+- Dr. Prince Parku [Pharmacist]
 - Mr Mohammed Lukman [Infectious Diseases Nurse]
-- Mr. Ameko Asiwome [Health Information]
+- Mr. Ameko Asiwome [Health Information Officer]
 :::
 
 
