@@ -80,7 +80,7 @@ The Point Prevalence Survey (PPS) conducted in May 2024 assessed antimicrobial p
 
 summary_data <- data.frame(
   Metric = c("Patients Surveyed", "Antimicrobial Use Prevalence", 
-             "Guideline Adherence", "Culture Before Treatment"),
+             "Guideline Adherence", "Culture taken Before Treatment"),
   Value = c("427", "65.1%", "45.2%", "14.7%"),
   Interpretation = c("Full hospital coverage", "High usage; requires review", 
                      "Below target; training needed", "Critical gap; diagnostic stewardship needed")
@@ -98,10 +98,10 @@ To evaluate antimicrobial prescribing practices, identify stewardship gaps, and 
 ### Design & Setting
 
 -   **Type:** Point Prevalence Survey
--   **Date:** May 2024\
+-   **Date:** May 2025
 -   **Location:** Tamale Teaching Hospital
 -   **Departments Surveyed:** Internal Medicine, Surgery, Pediatrics, Obstetrics & Gynecology, Polyclinic, Trauma & Orthopaedics, DEENT, Accident & Emergency
--   **Tool Used:** Standardized PPS Form
+-   **Tool Used:** Global PPS Data Collection Form
 
 ```{r}
 #| label: prevalence
@@ -143,8 +143,6 @@ ggplot(sub_data, aes(x = fct_reorder(sub_bmc, percentage), y = percentage)) +
 
 ### Indications for Prescribing
 
-**Infection Types:** Distribution includes respiratory, urinary, surgical site, and bloodstream infections.
-
 ```{r}
 #| label: indications
 #| echo: false
@@ -158,7 +156,6 @@ indication_data <- indication %>%
 
 ```
 
-### Indications for Prescribing
 
 **Infection Types:** Distribution of indicators includes Community Acquired Infections, Surgical Prophylaxis and Hospital Acquired Infections.
 

@@ -1,0 +1,510 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  11pt,
+  a4paper,
+]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
+  \setmainfont[]{Times New Roman}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{3}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{hyperref}
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Antimicrobial Use Point Prevalence Survey},
+  pdfauthor={TTH Antimicrobial Stewardship Committee},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Antimicrobial Use Point Prevalence Survey}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Tamale Teaching Hospital -- Hospital-Wide Assessment of
+Prescribing Practices}
+\author{TTH Antimicrobial Stewardship Committee}
+\date{2025-11-07}
+
+\begin{document}
+\maketitle
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=}
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\setstretch{1.25}
+\section{Online Version}
+
+\section{PDF Version}
+
+\href{index.pdf}{Download PDF Report}
+
+\section{Executive Summary}\label{executive-summary}
+
+The Point Prevalence Survey (PPS) conducted in May 2024 assessed
+antimicrobial prescribing patterns across Tamale Teaching Hospital. Key
+findings highlight critical gaps in stewardship practices:
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3780}}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0854}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5366}}@{}}
+
+\caption{\label{tbl-summary}Key PPS Findings and Interpretation}
+
+\tabularnewline
+
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Metric
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Value
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interpretation
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Patients Surveyed & 427 & Full hospital coverage \\
+Antimicrobial Use Prevalence & 65.1\% & High usage; requires review \\
+Guideline Adherence & 45.2\% & Below target; training needed \\
+Culture taken Before Treatment & 14.7\% & Critical gap; diagnostic
+stewardship needed \\
+
+\end{longtable}
+
+\section{Survey Overview \&
+Methodology}\label{survey-overview-methodology}
+
+\subsection{Objective}\label{objective}
+
+To evaluate antimicrobial prescribing practices, identify stewardship
+gaps, and inform quality improvement strategies.
+
+\subsection{Design \& Setting}\label{design-setting}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Type:} Point Prevalence Survey
+\item
+  \textbf{Date:} May 2025
+\item
+  \textbf{Location:} Tamale Teaching Hospital
+\item
+  \textbf{Departments Surveyed:} Internal Medicine, Surgery, Pediatrics,
+  Obstetrics \& Gynecology, Polyclinic, Trauma \& Orthopaedics, DEENT,
+  Accident \& Emergency
+\item
+  \textbf{Tool Used:} Global PPS Data Collection Form
+\end{itemize}
+
+\section{Key Findings}\label{key-findings}
+
+\subsection{Antimicrobial Use
+Prevalence}\label{antimicrobial-use-prevalence}
+
+\textbf{Overall Rate:} \textbf{65.1\%}, with 278 out of 427 surveyed
+patients receiving at least one antimicrobial agent. Visual charts show
+variation in use across departments, with some departments exceeding
+\textbf{65.1\%} the hospital wide rate.
+
+\begin{figure}[H]
+
+\caption{Antimicrobial Use Prevalence by Department}
+
+{\centering \includegraphics{index_files/figure-pdf/submc-breakdown-1.pdf}
+
+}
+
+\end{figure}%
+
+\subsection{Indications for
+Prescribing}\label{indications-for-prescribing}
+
+\textbf{Infection Types:} Distribution of indicators includes Community
+Acquired Infections, Surgical Prophylaxis and Hospital Acquired
+Infections.
+
+\begin{figure}[H]
+
+\caption{Distribution of Infection Types}
+
+{\centering \includegraphics{index_files/figure-pdf/infection-types-1.pdf}
+
+}
+
+\end{figure}%
+
+\textbf{Empirical vs.~Targeted Therapy:} Majority of prescriptions were
+empirical, reflecting low culture submission rates.
+
+\begin{figure}
+
+\caption{\label{fig-therapy-type}Distribution of Empirical vs Targeted
+Therapy}
+
+\centering{
+
+\includegraphics{index_files/figure-pdf/fig-therapy-type-1.pdf}
+
+}
+
+\end{figure}%
+
+\subsection{Antimicrobial Classes \&
+Agents}\label{antimicrobial-classes-agents}
+
+\textbf{Top Agents:} Ceftriaxone, Metronidazole, and cefuroxime were
+most frequently prescribed. With a balanced 1:1 AWaRe Ratio
+
+\begin{figure}[H]
+
+\caption{Most Frequently Prescribed Antimicrobial Agents}
+
+{\centering \includegraphics{index_files/figure-pdf/top-agents-1.pdf}
+
+}
+
+\end{figure}%
+
+\textbf{WHO AWaRe Classification:} Majority of agents fall under the
+`Watch' category, indicating potential for resistance.
+
+\begin{itemize}
+\item
+  \textbf{The Access-to-Watch ratio} is nearly 1:1, which is not ideal.
+  WHO recommends a higher proportion of Access antibiotics to minimize
+  resistance risks.
+\item
+  This balance suggests a need for stewardship interventions to promote
+  Access agents and reduce reliance on Watch antibiotics unless
+  clinically justified.
+\end{itemize}
+
+\begin{figure}[H]
+
+\caption{Distribution of Antimicrobials by WHO AWaRe Classification}
+
+{\centering \includegraphics{index_files/figure-pdf/aware-classification-1.pdf}
+
+}
+
+\end{figure}%
+
+\subsection{Quality Indicators
+Compliance}\label{quality-indicators-compliance}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Stop/Review Date} (56.2\%): Moderate compliance; over half of
+  prescriptions had a review date, but improvement is needed to ensure
+  timely reassessment.
+\item
+  \textbf{Guideline Adherence} (45.2\%): Low adherence; indicates a need
+  for training and regular audits to promote evidence-based prescribing.
+\item
+  \textbf{Culture Before Treatment} (14.7\%): Critically low; reflects
+  poor diagnostic stewardship and over-reliance on empirical therapy.
+\item
+  \textbf{Biomarker-Based Treatment} (34.1\%): Limited use; suggests
+  potential to expand diagnostic support for antimicrobial decisions.
+\item
+  \textbf{Reason for Indication Documented} (40.8\%): Weak
+  documentation; undermines accountability and hinders audit
+  effectiveness.
+\end{itemize}
+
+\begin{figure}[H]
+
+\caption{Compliance with Antimicrobial Stewardship Quality Indicators}
+
+{\centering \includegraphics{index_files/figure-pdf/quality-chart-1.pdf}
+
+}
+
+\end{figure}%
+
+\subsection{Microbiology \& Resistance
+Data}\label{microbiology-resistance-data}
+
+\textbf{Culture Submission Rates by Ward:} Lowest in high-prescribing
+wards such as Surgery and A\&E.\\
+\textbf{Resistance Trends:} Data not available; future surveys should
+include antibiogram analysis.
+
+\subsection{Departmental Contributions to Antimicrobial
+Consumption}\label{departmental-contributions-to-antimicrobial-consumption}
+
+\textbf{Highest Rates}:
+
+-Internal Medicine (23.1\%) and Surgery (22.5\%) lead in culture
+submission, but still far below ideal (\textgreater80\%).
+
+\textbf{Moderate Rates}:
+
+-TTH overall (14.7\%), Paediatrics (14.1\%), and Obstetrics \&
+Gynaecology (12.2\%) show low compliance.
+
+\textbf{Critical Gaps}:
+
+\begin{itemize}
+\tightlist
+\item
+  Accident \& Emergency (5.9\%) and Orthopaedics \& Trauma (5\%) have
+  very poor submission rates.
+\item
+  DEENT and Polyclinic (0\%) indicate no cultures submitted at all,
+  which is alarming.
+\end{itemize}
+
+\begin{figure}[H]
+
+\caption{Microbiological Culture Submission Rates Before Treatment by
+Ward}
+
+{\centering \includegraphics{index_files/figure-pdf/culture-rates-1.pdf}
+
+}
+
+\end{figure}%
+
+\subsection{Top Wards/Unit contributing to Most of AM
+Consumption}\label{top-wardsunit-contributing-to-most-of-am-consumption}
+
+\begin{itemize}
+\item
+  \textbf{Left Side (Red Bars)}: These wards account for the largest
+  share of antimicrobial use. The first three represent the top
+  contributors i.e ICU, MICU, and NICU.
+\item
+  \textbf{Cumulative curve} reaches \textasciitilde80\% by around 22 out
+  of 36 wards, contributes most of the antimicrobial consumption.
+\item
+  \textbf{Right Side (Gray Bars)}: Wards with lower antimicrobial use
+  have minimal impact on overall consumption.
+\end{itemize}
+
+\begin{figure}[H]
+
+\caption{Top Wards/Unit contributing to Most of AM Consumption}
+
+{\centering \includegraphics{index_files/figure-pdf/benchmark-chart-1.pdf}
+
+}
+
+\end{figure}%
+
+\section{Recommendations}\label{recommendations}
+
+\subsection{Short-Term Actions}\label{short-term-actions}
+
+\begin{itemize}
+\tightlist
+\item
+  Conduct targeted training on guideline-based prescribing
+\item
+  Promote culture-before-treatment campaigns
+\end{itemize}
+
+\subsection{Medium-Term Goals}\label{medium-term-goals}
+
+\begin{itemize}
+\tightlist
+\item
+  Integrate stewardship prompts into EHR workflows
+\item
+  Establish AMS champions in each department
+\end{itemize}
+
+\subsection{Long-Term Strategy}\label{long-term-strategy}
+
+\begin{itemize}
+\tightlist
+\item
+  Develop a hospital-wide antibiogram
+\item
+  Institutionalize quarterly PPS audits
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{Prepared by:} TTH AMS Committee
+
+\textbf{Team:}
+
+\begin{itemize}
+\tightlist
+\item
+  Dr.~Ana Maria Simono Charadan {[}Consultant \& Chair-person{]}
+\item
+  Dr.~Samuel Yao Alomatu {[}Infectious Diseases Specialist{]}
+\item
+  Dr.~Elvis Duorina, {[}Senior Specialist Pharmacist{]}
+\item
+  Mr.~Alhassan M. Shamudeen, {[}Head of Research and Development{]}
+\item
+  Dr.~David Eklu Zeyeh, MLS, {[}Medical Microbiologist{]}
+\item
+  Dr.~Anthony Kwaw {[}Specialist Pharmacist{]}
+\item
+  Dr.~Prince Parku {[}Pharmacist{]}
+\item
+  Mr Mohammed Lukman {[}Infectious Diseases Nurse{]}
+\item
+  Mr.~Ameko Asiwome {[}Health Information Officer{]}
+\end{itemize}
+
+
+
+\end{document}
